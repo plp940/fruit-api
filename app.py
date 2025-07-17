@@ -1,10 +1,11 @@
+
 from flask import Flask, request, jsonify
 from tensorflow.keras.models import load_model
 import numpy as np
 from PIL import Image
 import io
 
-app = Flask(__name__)
+
 model = load_model("final_resnet.h5")
 class_names = {
     0: 'FreshApple', 1: 'FreshBanana', 2: 'FreshGrape', 3: 'FreshGuava',
